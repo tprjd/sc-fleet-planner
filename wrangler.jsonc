@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sc-fleet-planner",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-05-01",
+  "observability": { "enabled": true },
+  "durable_objects": {
+    "bindings": [{ "name": "Fleet", "class_name": "FleetRoom" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["FleetRoom"] }]
+}
